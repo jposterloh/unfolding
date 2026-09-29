@@ -1,8 +1,10 @@
 package de.fhpotsdam.matrix;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import processing.core.PApplet;
+import TUIO.TuioBlob;
 import TUIO.TuioClient;
 import TUIO.TuioCursor;
 import TUIO.TuioListener;
@@ -17,7 +19,7 @@ import TUIO.TuioTime;
  */
 public class GridFingerTest extends PApplet implements TuioListener {
 
-	public static Logger log = Logger.getLogger(GridFingerTest.class);
+	public static Logger log = LogManager.getLogger(GridFingerTest.class);
 
 	Grid grid;
 
@@ -138,6 +140,18 @@ public class GridFingerTest extends PApplet implements TuioListener {
 
 	@Override
 	public void refresh(TuioTime arg0) {
+	}
+
+	@Override
+	public void addTuioBlob(TuioBlob arg0) {
+	}
+
+	@Override
+	public void updateTuioBlob(TuioBlob arg0) {
+	}
+
+	@Override
+	public void removeTuioBlob(TuioBlob arg0) {
 	}
 
 	@Override

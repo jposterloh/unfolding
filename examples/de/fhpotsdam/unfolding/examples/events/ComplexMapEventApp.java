@@ -3,7 +3,8 @@ package de.fhpotsdam.unfolding.examples.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import processing.core.PApplet;
 import de.fhpotsdam.unfolding.UnfoldingMap;
@@ -39,7 +40,7 @@ import de.fhpotsdam.unfolding.utils.DebugDisplay;
  */
 public class ComplexMapEventApp extends PApplet {
 
-	public static Logger log = Logger.getLogger(ComplexMapEventApp.class);
+	public static Logger log = LogManager.getLogger(ComplexMapEventApp.class);
 
 	List<UnfoldingMap> maps = new ArrayList<UnfoldingMap>();
 

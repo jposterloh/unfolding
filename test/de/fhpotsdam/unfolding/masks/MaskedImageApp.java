@@ -1,6 +1,7 @@
 package de.fhpotsdam.unfolding.masks;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import processing.core.PApplet;
 import processing.core.PGraphics;
@@ -8,7 +9,7 @@ import processing.core.PImage;
 
 public class MaskedImageApp extends PApplet {
 
-	public static Logger log = Logger.getLogger(MaskedImageApp.class);
+	public static Logger log = LogManager.getLogger(MaskedImageApp.class);
 
 	PImage img;
 	PGraphics mask;

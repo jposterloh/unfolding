@@ -10,10 +10,13 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="unfolding-app-template/libNative"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-api-2.26.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-core-2.26.1.jar"/>
 	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/json4processing.jar"/>
-	<classpathentry kind="lib" path="lib/libTUIO.jar"/>
+	<classpathentry kind="lib" path="lib/tuio-lib-1.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/javaosc-core-0.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.4.jar"/>
 	<classpathentry kind="lib" path="lib/unfolding.0.9.92.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

@@ -1,6 +1,7 @@
 package de.fhpotsdam.unfolding.interaction;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import processing.core.PApplet;
 import processing.core.PVector;
@@ -19,7 +20,7 @@ import de.fhpotsdam.unfolding.utils.ScreenPosition;
  */
 public class ManualMapInteractionsTestApp extends PApplet {
 
-	public static Logger log = Logger.getLogger(ManualMapInteractionsTestApp.class);
+	public static Logger log = LogManager.getLogger(ManualMapInteractionsTestApp.class);
 
 	/** The interactive map. */
 	UnfoldingMap map;

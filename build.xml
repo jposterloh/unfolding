@@ -8,7 +8,7 @@
 		NOTES
 			
 			Version number needs to be updated manually also in
-				/src/de/fhpotsdam/unfolding/UnfoldingMap.java
+				/src/main/java/de/fhpotsdam/unfolding/UnfoldingMap.java
 				/resources/unfolding_app_template/classpath
 				/resources/unfolding_app_template/classpath_with_examples
 				/resources/library.properties
@@ -26,7 +26,7 @@
 	<property name="version" value="0.9.92" />
 	<property name="unfolding.jar" value="unfolding.${version}.jar" />
 
-	<property name="src.dir" location="src" />
+	<property name="src.dir" location="src/main/java" />
 	<property name="data.dir" location="data" />
 	<property name="example.dir" location="examples" />
 	<property name="example.processing.dir" location="examples-processing" />
@@ -83,7 +83,7 @@
 
 	<!-- Compiles the java code (including the usage of library for JUnit -->
 	<target name="compile" depends="clean, makedir">
-		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}">
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}" release="8" encoding="UTF-8">
 			<classpath refid="build.classpath" />
 			<!-- <classpath refid="junit.class.path" /> -->
 		</javac>
@@ -229,7 +229,8 @@
 			
 		<!-- copy libs -->
 		<copy tofile="${dist.dir}/Unfolding/library/Unfolding.jar" file="${dist.dir}/${unfolding.jar}" />
-		<copy todir="${dist.dir}/Unfolding/library/" file="${lib.dir}/log4j-1.2.15.jar" />
+		<copy todir="${dist.dir}/Unfolding/library/" file="${lib.dir}/log4j-api-2.26.1.jar" />
+		<copy todir="${dist.dir}/Unfolding/library/" file="${lib.dir}/log4j-core-2.26.1.jar" />
 		<copy todir="${dist.dir}/Unfolding/library/" file="${lib.dir}/json4processing.jar" />
 
 		<!-- copy processing examples -->

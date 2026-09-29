@@ -1,6 +1,7 @@
 package de.fhpotsdam.unfolding.interaction;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import processing.core.PApplet;
 
@@ -20,7 +21,7 @@ import de.fhpotsdam.unfolding.utils.ScreenPosition;
 @SuppressWarnings("serial")
 public class PanToCenterBugApp extends PApplet {
 
-	public static Logger log = Logger.getLogger(PanToCenterBugApp.class);
+	public static Logger log = LogManager.getLogger(PanToCenterBugApp.class);
 
 	DebugDisplay debugDisplay;
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import processing.core.PApplet;
+import TUIO.TuioBlob;
 import TUIO.TuioClient;
 import TUIO.TuioCursor;
 import TUIO.TuioListener;
@@ -105,6 +106,18 @@ public class MultiTransObjectApp extends PApplet implements TuioListener {
 
 	@Override
 	public void refresh(TuioTime arg0) {
+	}
+
+	@Override
+	public void addTuioBlob(TuioBlob arg0) {
+	}
+
+	@Override
+	public void updateTuioBlob(TuioBlob arg0) {
+	}
+
+	@Override
+	public void removeTuioBlob(TuioBlob arg0) {
 	}
 
 	@Override
