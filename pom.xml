@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.unfoldingmaps</groupId>
 	<artifactId>unfolding</artifactId>
-	<version>0.9.97-p4-SNAPSHOT</version>
+	<version>0.9.97</version>
 	<packaging>jar</packaging>
 	<name>Unfolding core</name>
 	<description>Unfolding is a library to create interactive maps and

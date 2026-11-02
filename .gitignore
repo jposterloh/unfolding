@@ -13,3 +13,6 @@ src/de/fhpotsdam/unfolding/mapdisplay/GLGraphicsMapDisplayTransparentTest.java
 release/
 # generated from release.properties by ./gradlew writeLibraryProperties
 /library.properties
+
+# Maven
+/target/
