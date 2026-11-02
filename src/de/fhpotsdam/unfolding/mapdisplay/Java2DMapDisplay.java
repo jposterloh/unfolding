@@ -412,6 +412,13 @@ public class Java2DMapDisplay extends AbstractMapDisplay implements PConstants {
 	public void draw() {
 		PGraphics pg = getInnerPG();
 		pg.beginDraw();
+		// Nearest neighbour for the tiles: with Processing 4's default smoothing, Java2D scaled every tile
+		// in its slow generic loop (half the frame rate at a full core). At whole zoom levels the tiles
+		// are drawn 1:1, so the map looks the same.
+		if (pg.getNative() instanceof java.awt.Graphics2D g2) {
+			g2.setRenderingHint(java.awt.RenderingHints.KEY_INTERPOLATION,
+					java.awt.RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+		}
 
 		// Clears canvas (set to transparency, to not smudge previous map on panning)
 		pg.clear();
