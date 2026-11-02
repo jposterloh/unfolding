@@ -42,7 +42,7 @@ public class BarScaleUI {
 		barWeight = 1;
 		barCapOffset = 0;
 		p.color(255);
-		p.textFont(p.createFont("Sans-Serif", 10));
+		p.textFont(p.createFont("SansSerif", 10));
 	}
 
 	public BarScaleUI(PApplet p, UnfoldingMap map) {

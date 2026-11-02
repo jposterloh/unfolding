@@ -56,7 +56,7 @@ public class TuioCursorHandler extends MapEventBroadcaster implements TuioListen
 		super(maps);
 
 		this.p = p;
-		this.font = p.createFont("Sans-Serif", 12);
+		this.font = p.createFont("SansSerif", 12);
 
 		tuioClient = new TuioClient();
 		if (listenToTuio) {
