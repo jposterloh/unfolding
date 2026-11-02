@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PVector;
+import TUIO.TuioBlob;
 import TUIO.TuioClient;
 import TUIO.TuioCursor;
 import TUIO.TuioListener;
@@ -285,6 +286,17 @@ public class TuioCursorHandler extends MapEventBroadcaster implements TuioListen
 		p.fill(0, 200);
 		p.textSize(12);
 		p.text(tc.getCursorID(), tc.getScreenX(p.width) - 4, tc.getScreenY(p.height) + 4);
+	}
+
+	// TUIO 1.1 blobs (tuio-lib), not used for map interaction
+
+	public void addTuioBlob(TuioBlob tblb) {
+	}
+
+	public void updateTuioBlob(TuioBlob tblb) {
+	}
+
+	public void removeTuioBlob(TuioBlob tblb) {
 	}
 
 }

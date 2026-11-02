@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.unfoldingmaps</groupId>
+	<artifactId>unfolding</artifactId>
+	<version>0.9.97-p4-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Unfolding core</name>
+	<description>Unfolding is a library to create interactive maps and
+		geovisualizations in Processing and Java. Processing 4 build, based
+		on https://github.com/enkatsu/unfolding</description>
+	<url>http://unfoldingmaps.org/</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+	</properties>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/jposterloh/unfolding/blob/master/LICENSE.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<url>https://github.com/jposterloh/unfolding/blob/master/</url>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>org.processing</groupId>
+			<artifactId>core</artifactId>
+			<version>4.3.1</version>
+			<!-- only the OpenGL renderers (P2D, P3D) need JOGL, and it is not on Maven
+			     Central; LetsROC draws with JAVA2D -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.jogamp.gluegen</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.jogamp.jogl</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- the org.apache.log4j API the sources use, with log4j 1.2's vulnerabilities fixed -->
+		<dependency>
+			<groupId>ch.qos.reload4j</groupId>
+			<artifactId>reload4j</artifactId>
+			<version>1.2.26</version>
+		</dependency>
+		<!-- replaces lib/json4processing.jar -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20250517</version>
+		</dependency>
+		<!-- replaces lib/libTUIO.jar -->
+		<dependency>
+			<groupId>com.artistech</groupId>
+			<artifactId>tuio-lib</artifactId>
+			<version>1.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.41.2.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>github-unfolding</id>
+			<name>GitHub Unfolding Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/jposterloh/unfolding</url>
+		</repository>
+	</distributionManagement>
+</project>
